@@ -45,6 +45,7 @@ public class PDFGController {
 	@RequestMapping(value = "/addapplicant", method = RequestMethod.POST)
 	public ResponseEntity<PDFGApplicant> add(@RequestBody PDFGApplicant a)
 	{
+		System.out.println("in method");
 		PDFGApplicant apl=sanctionservice.adddata(a);
 		return new ResponseEntity<PDFGApplicant>(apl,HttpStatus.CREATED);
 	}
